@@ -1,36 +1,39 @@
-# automation-tool
-Docker Installation With The us Anisble 
+#   Requirement  for installation
 
-==============================================
-=        Reqiuremt  for installtion          =
-==============================================
-=    anisble package install in your system  =
-=    httpd package install in your system    = 
-==============================================
+ansible package install in your system  
+httpd package install in your system  
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=     check your anisble packaauge install not with command  =
-=  #> rpm -q ansible 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=     check your httpd package install not with  command   =
-=  #> rpm -q httpd
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=  Check your ansible service running 
-=  systemclt restart ansible
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Install step
-----------------------------------------------------------------------------------------
- 
+## Check your Packages install not with command
+
+```bash
+= > rpm -q ansible 
+= > rpm -q httpd
+```
+
+
+## Check your ansible service running 
+
+```bash
+= > systemclt restart ansible
+
+```
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
  => git clone  https://github.com/ayushpawar21/automation-tool.git  #download the repo
  => cd automation-tool                                              #Change The directory
   
- => ansible-playbook Rhel8_DockerInstalltion.yml  
- 
- ////////////////////////////// INSTALLTION DONE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
- 
+ => ansible-playbook Rhel8_DockerInstalltion.yml 
+```
 
- 
- 
- 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
