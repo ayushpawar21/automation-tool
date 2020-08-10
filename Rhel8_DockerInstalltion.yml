@@ -1,6 +1,6 @@
 ---
-- name: Getting Ready and Starting the of Docker Install 
-  hosts: localhost
+- name: Getting Ready and Starting the of Docker Install
+  hosts: Docker
   tasks:
     - name: Add Epel Relesase Repo
       yum:
@@ -31,13 +31,21 @@
       command: dnf install -y docker-ce --nobest
       become: yes
 
+    - name: Install Python36
+      package:
+        name: python36
+        state: present
+    - name: Install pip docker-py python package.
+      pip:
+        name: docker-py
+
     - name: Start Docker service
       service:
         name: docker
         state: started
         enabled: yes
       become: yes
-      
+
     - name: Create WebServer in Container
       docker_container:
          name: Webserver
